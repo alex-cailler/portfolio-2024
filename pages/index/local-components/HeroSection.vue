@@ -1,5 +1,5 @@
 <template>
-  <div class="hero-section">
+  <div class="hero-section" data-bg-color="#ffffff">
     <div class="hero-section__container">
       <div>
         <h1 class="hero-section__title">
