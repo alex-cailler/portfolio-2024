@@ -71,13 +71,23 @@
         text-transform: uppercase;
         font-size: 24px;
         font-weight: bold;
+        margin-bottom: 16px;
+        border-bottom: solid 1px;
+      }
+      &__navigation {
+        &__list {
+          &__item {
+            font-size: 20px;
+            margin-bottom: 8px;
+          }
+        }
       }
     }
   }
   &__copy {
     display: flex;
     flex-direction: column;
-    font-size: 5rem;
+    font-size: 4rem;
     line-height: 90%;
     font-weight: 700;
   }
