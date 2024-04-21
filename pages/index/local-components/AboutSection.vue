@@ -14,9 +14,13 @@
         <the-button>Contacter moi</the-button>
       </div>
       <div class="about-section__right">
-        <img class="about-section__image" src="/profile-image.jpg" alt="profile image" />
+        <div class="about-section__image">
+          <img src="/profile-image.png" alt="profile image" />
+        </div>
       </div>
     </div>
+    <div class="about-section__shape about-section__shape--1"></div>
+    <div class="about-section__shape about-section__shape--2"></div>
   </div>
 </template>
 
@@ -50,6 +54,7 @@ onMounted(() => {
 .about-section {
   background-color: #000000;
   border-radius: 30px;
+  position: relative;
   &__container {
     padding: 10rem 10%;
     display: flex;
@@ -59,20 +64,43 @@ onMounted(() => {
       width: 100%;
     }
   }
+  &__right {
+    display: flex;
+    position: relative;
+    z-index: 1;
+  }
+  &__left {
+    position: relative;
+    z-index: 1;
+    display: block;
+  }
   &__image {
     margin: auto;
-    height: auto;
+    position: relative;
     width: 500px;
-    filter: saturate(0);
+    img {
+      filter: saturate(0);
+      width: 100%;
+      height: auto;
+    }
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      background: linear-gradient(rgba(0, 0, 0, 0) 0%, #000000  100%);;
+      left: 0;
+      height: 50%;
+      width: 100%;
+    }
   }
   &__title {
     width: fit-content;
     color: white;
-    font-weight: 700;
+    font-weight: 600;
     display: flex;
     flex-direction: column;
     font-size: 100px;
-    line-height: 100%;
+    line-height: 100px;
     text-transform: uppercase;
     margin-bottom: 50px;
   }
@@ -90,7 +118,7 @@ onMounted(() => {
           margin: 0;
           background: linear-gradient(
                   to right,
-                  rgb(255, 255, 255) 50%,
+                  #787878 50%,
                   rgb(37, 37, 37) 50%
           );
           background-size: 200% 100%;
@@ -99,6 +127,24 @@ onMounted(() => {
           -webkit-background-clip: text;
         }
       }
+    }
+  }
+  &__shape {
+    border-radius: 100rem;
+    height: 529px;
+    width: 529px;
+    position: absolute;
+    &--1 {
+      background: linear-gradient(45deg, #1F1F1F 0%, #000000  65%);
+      left: 0;
+      bottom: 0;
+      transform: translate(10%, -10%);
+    }
+    &--2 {
+      background: linear-gradient(220deg, #1F1F1F 0%, #000000  65%);
+      transform: translate(50%, 40%);
+      right: 50%;
+      top: 0
     }
   }
 }
