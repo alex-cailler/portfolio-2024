@@ -84,11 +84,11 @@ onMounted(() => {
 .header {
   z-index: 999;
   padding: 20px 50px;
-  border-bottom: solid 1px;
+  border-bottom: solid 1px #E5E7D9;
   position: fixed;
   top: 0;
   width: 100vw;
-  background-color: #fff3e3;
+  // background-color: #FEFFF6;
   &__container {
     display: flex;
     justify-content: space-between;

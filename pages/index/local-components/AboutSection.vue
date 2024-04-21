@@ -1,17 +1,20 @@
 <template>
   <div class="about-section" data-bg-color="#000000">
     <div class="about-section__container">
-      <div class="about-section__content__text">
-        <div class="about-section__label">
-          Un petit mot sur moi
+      <div class="about-section__left">
+        <div class="about-section__title">
+          <span>Un petit mot</span>
+          <span>sur qui je suis</span>
         </div>
-        <p>
-          "Développeur passionné par mon travail, dévoué à la satisfaction de mes clients.
-          Je trouve une grande joie dans l'acte de créer et d'innover dans le domaine du développement,
-          ce qui me pousse à travailler avec assiduité et détermination.
-          Ma passion pour le développement et mon engagement envers mes clients
-          sont au cœur de mon identité professionnelle."
-        </p>
+        <div class="about-section__content__text">
+          <p>
+            Développeur passionné par mon travail, dévoué à la satisfaction de mes clients. Je trouve une grande joie dans l'acte de créer et d'innover dans le domaine du développement, ce qui me pousse à travailler avec assiduité et détermination. Ma passion pour le développement et mon engagement envers mes clients sont au cœur de mon identité professionnelle.
+          </p>
+        </div>
+        <the-button>Contacter moi</the-button>
+      </div>
+      <div class="about-section__right">
+        <img class="about-section__image" src="/profile-image.jpg" alt="profile image" />
       </div>
     </div>
   </div>
@@ -46,41 +49,43 @@ onMounted(() => {
 <style lang="scss">
 .about-section {
   background-color: #000000;
+  border-radius: 30px;
   &__container {
-    padding-left: 10%;
-    padding-right: 10%;
+    padding: 10rem 10%;
     display: flex;
     align-items: center;
-    height: 100vh;
     position: relative;
+    & > div {
+      width: 100%;
+    }
   }
-  //&__image {
-  //  display: flex;
-  //  justify-content: center;
-  //  img {
-  //    height: auto;
-  //    width: 500px;
-  //    filter: saturate(0);
-  //    border-radius: 100rem 100rem 1rem 100rem;
-  //  }
-  //}
-  &__label {
-    position: absolute;
+  &__image {
+    margin: auto;
+    height: auto;
+    width: 500px;
+    filter: saturate(0);
+  }
+  &__title {
     width: fit-content;
     color: white;
-    top: 1rem;
-    left: -24%;
+    font-weight: 700;
+    display: flex;
+    flex-direction: column;
+    font-size: 100px;
+    line-height: 100%;
+    text-transform: uppercase;
+    margin-bottom: 50px;
   }
   &__content {
+    margin-bottom: 50px;
     &__text {
-      position: relative;
-      margin: 20%;
-      width: 100%;
+      margin-bottom: 50px;
       p {
         div {
           //font-style: italic;
-          line-height: 140%;
-          font-size: 32px;
+          line-height: 170%;
+          font-size: 28px;
+          letter-spacing: 1px;
           color: transparent;
           margin: 0;
           background: linear-gradient(

@@ -3,12 +3,13 @@
     <div class="hero-section__container">
       <div>
         <h1 class="hero-section__title">
-          <span>Alexandre</span>
-          <span>Cailler</span>
+          Un developpeur pour vos projets
         </h1>
         <p class="hero-section__description">Un développeur fullstack et concepteur indépendant qui propulse les visions des startups vers la réalité.</p>
       </div>
+      <the-button>Contacter moi</the-button>
     </div>
+    <div class="hero-section__shape--1"></div>
   </div>
 </template>
 
@@ -18,32 +19,41 @@
 
 <style scoped lang="scss">
 .hero-section {
+  position: relative;
   &__container {
-    padding-left: 10%;
-    padding-right: 10%;
-    height: 100vh;
     width: 100%;
+    padding: 15rem 10%;
   }
   &__title {
+    color: #00310B;
     transition-duration: .5s;
-    font-size: 15.25rem;
+    font-size: 120px;
     font-weight: 700;
-    line-height: 90%;
+    line-height: 110%;
     text-transform: uppercase;
     display: flex;
     flex-direction: column;
-    margin: 10rem 0 2rem;
-    //span:first-child {
-    //  padding-left: 15%;
-    //}
-    //span:last-child {
-    //  padding-right: 15%;
-    //  text-align: right;
-    //}
+    margin-bottom: 50px;
   }
   &__description {
     font-size: 24px;
-    max-width: 47ch;
+    max-width: 570px;
+    color: #555555;
+    margin-bottom: 50px;
+    line-height: 175%;
+  }
+  &__shape {
+    &--1 {
+      z-index: -1;
+      position: absolute;
+      height: 800px;
+      width: 800px;
+      left: 0;
+      top: 0;
+      transform: translate(-14%, -14%);
+      background: linear-gradient(131deg, #EFF0E2 0%, #FEFFF6 100%);
+      border-radius: 1000px;
+    }
   }
 }
 </style>
