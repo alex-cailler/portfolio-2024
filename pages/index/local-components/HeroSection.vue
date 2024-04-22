@@ -1,19 +1,41 @@
 <template>
-  <div class="hero-section" data-bg-color="#ffffff">
-    <div class="hero-section__container">
+  <div id="hero-section" class="hero-section" data-bg-color="#ffffff">
+    <div id="hero-section__container" class="hero-section__container">
       <div>
         <h1 class="hero-section__title">
           Un developpeur pour vos projets
         </h1>
         <p class="hero-section__description">Un développeur fullstack et concepteur indépendant qui propulse les visions des startups vers la réalité.</p>
+        <the-button>Contacter moi</the-button>
       </div>
-      <the-button>Contacter moi</the-button>
     </div>
     <div class="hero-section__shape--1"></div>
   </div>
 </template>
 
 <script lang="ts" setup>
+const { $gsap } = useNuxtApp()
+
+onMounted(() => {
+
+  $gsap.timeline({
+    scrollTrigger: {
+      trigger: document.getElementById('hero-section'),
+      scrub: true,
+      start: "top",
+      end: "center -30%",
+    }
+  }).fromTo(
+      document.getElementById('hero-section__container'),
+      { y: "0%", autoAlpha: 1 },
+      { y: "20%", autoAlpha: 0 }
+  )
+
+  // $gsap.to(document.getElementById('hero-section__container'), {
+  //   opacity: 0,
+  //   translateY: '-50%',
+  // });
+})
 </script>
 
 
@@ -23,6 +45,8 @@
   &__container {
     width: 100%;
     padding: 15rem 10%;
+    position: relative;
+    z-index: 1;
   }
   &__title {
     color: #00310B;

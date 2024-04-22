@@ -31,15 +31,14 @@ const { $gsap } = useNuxtApp();
 onMounted(() => {
   if (process.client) {
     const split = new SplitType('.about-section__content__text > p', { types: 'lines' });
-    console.log(split.lines)
 
     split.lines.forEach((target) => {
       $gsap.to(target, {
         backgroundPositionX: 0,
         ease: "none",
-        duration: 10,
         scrollTrigger: {
           trigger: target,
+          duration: 10,
           scrub: 1,
           start: "top center",
           end: "bottom center"
@@ -56,7 +55,7 @@ onMounted(() => {
   border-radius: 30px;
   position: relative;
   &__container {
-    padding: 10rem 10%;
+    padding: 15rem 10%;
     display: flex;
     align-items: center;
     position: relative;
