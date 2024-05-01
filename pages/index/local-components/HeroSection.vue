@@ -3,7 +3,7 @@
     <div id="hero-section__container" class="hero-section__container">
       <div>
         <h1 class="hero-section__title">
-          Un developpeur pour vos projets
+          <span>Un developpeur pour vos projets</span>
         </h1>
         <p class="hero-section__description">Un développeur fullstack et concepteur indépendant qui propulse les visions des startups vers la réalité.</p>
         <the-button>Contacter moi</the-button>
@@ -55,9 +55,15 @@ onMounted(() => {
     font-weight: 700;
     line-height: 110%;
     text-transform: uppercase;
-    display: flex;
-    flex-direction: column;
+    height: 240px;
     margin-bottom: 50px;
+    overflow: hidden;
+    position: relative;
+    span {
+      position: absolute;
+      line-height: 110%;
+      font-size: 120px;
+    }
   }
   &__description {
     font-size: 24px;

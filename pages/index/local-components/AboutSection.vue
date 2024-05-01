@@ -52,7 +52,7 @@ onMounted(() => {
 <style lang="scss">
 .about-section {
   background-color: #000000;
-  border-radius: 30px;
+  border-radius: 30px 30px 0 0;
   position: relative;
   &__container {
     padding: 15rem 10%;
@@ -98,7 +98,7 @@ onMounted(() => {
     font-weight: 600;
     display: flex;
     flex-direction: column;
-    font-size: 100px;
+    font-size: 70px;
     line-height: 100px;
     text-transform: uppercase;
     margin-bottom: 50px;

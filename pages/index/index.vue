@@ -2,6 +2,7 @@
   <div>
     <hero-section />
     <AboutSection />
+    <projects-section />
     <services-section />
     <why-us-section />
     <testimonials-section />
@@ -15,6 +16,7 @@ import ServicesSection from "~/pages/index/local-components/ServicesSection.vue"
 import AboutSection from "~/pages/index/local-components/AboutSection.vue";
 import WhyUsSection from "~/pages/index/local-components/WhyUsSection.vue";
 import TestimonialsSection from "~/pages/index/local-components/TestimonialsSection.vue";
+import ProjectsSection from "~/pages/index/local-components/ProjectsSection.vue";
 
 if (process.client) {
 

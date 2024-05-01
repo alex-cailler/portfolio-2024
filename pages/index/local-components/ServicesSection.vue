@@ -56,11 +56,15 @@ if (process.client) {
   &__container {
     padding-left: 10%;
     padding-right: 10%;
+    padding-bottom: 30rem;
+    border-radius: 0 0 30px 30px;
+    background-color: black;
     position: relative;
   }
   &__title {
-    margin: 0;
-    font-size: 12rem;
+    font-size: 8rem;
+    margin: 0 0 3rem 0;
+    color: #FFFFFF;
   }
   &__list {
     display: flex;
